@@ -32,7 +32,7 @@ async function bootstrap() {
         name: 'Authorization',
         in: 'header',
       },
-      'jwt', // This name will be used in the @ApiBearerAuth('jwt') decorator
+      'jwt', 
     )
     .build();
 

@@ -5,20 +5,11 @@ import {
   IsIn,
   Min,
   Max,
-  IsObject,
 } from 'class-validator';
 import { Type } from 'class-transformer';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class filterDto {
-  // @ApiProperty({
-  //   required: false,
-  //   description: 'Объект условий фильтрации (гибкий поиск по полям)',
-  //   example: { language: 'Английский', price: { lt: 300 } },
-  // })
-  // @IsOptional()
-  // @IsObject()
-  // where?: any;
 
   @ApiProperty({
     required: false,
@@ -78,22 +69,4 @@ export class filterDto {
   @IsOptional()
   @IsString()
   language?: string;
-
-  // @ApiProperty({
-  //   required: false,
-  //   description: 'Вложенные связи, которые нужно включить в ответ',
-  //   example: { course: true, teacher: true },
-  // })
-  // @IsOptional()
-  // @IsObject()
-  // include?: any;
-
-  // @ApiProperty({
-  //   required: false,
-  //   description: 'Выбор конкретных полей для выборки',
-  //   example: { title: true, price: true },
-  // })
-  // @IsOptional()
-  // @IsObject()
-  // select?: any;
 }

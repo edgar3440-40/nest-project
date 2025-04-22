@@ -53,11 +53,6 @@ export class AuthDto {
   @IsString()
   profileImg?: string;
 
-  @ApiProperty({
-    example: 1,
-    description: 'ID пользователя. Используется при обновлении данных',
-    required: false,
-  })
   @IsOptional()
   @IsNumber()
   id?: number;

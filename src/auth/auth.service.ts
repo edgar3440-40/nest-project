@@ -60,7 +60,6 @@ export class AuthService {
   }
 
   async login(dto: LoginDto) {
-    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call
     const student = await this.prismaService.student.findUnique({
       where: {
         email: dto.email,
